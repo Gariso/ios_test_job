@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Pilgrim
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        PilgrimManager.shared().configure(withConsumerKey: "EKONYSZG0B5LPGLZIMWFO1THXJ01P2HB0LJQXLRIIJIZ55V1", secret: "O5FF4EKZSSAPYFRW2V1GYXB0VVEA24GE5ZELSLTNQJSKKBQN", delegate: self, completion: nil)
         return true
     }
 
@@ -33,5 +35,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate : PilgrimManagerDelegate {
+  // Primary visit handler:
+  func pilgrimManager(_ pilgrimManager: PilgrimManager, handle visit: Visit) {
+    // Process the visit however you'd like:
+    print("\(visit.hasDeparted ? "Departure from" : "Arrival at") \(visit.venue != nil ? visit.venue!.name : "Unknown venue."). Added a Pilgrim visit at: \(visit.displayName)")
+  }
+
+  // Optional: If visit occurred without network connectivity
+  func pilgrimManager(_ pilgrimManager: PilgrimManager, handleBackfill visit: Pilgrim.Visit) {
+    // Process the visit however you'd like:
+    print("Backfill \(visit.hasDeparted ? "departure from" : "arrival at") \(visit.venue != nil ? visit.venue!.name : "Unknown venue."). Added a Pilgrim backfill visit at: \(visit.displayName)")
+  }
+
+  // Optional: If visit occurred by triggering a geofence
+  func pilgrimManager(_ pilgrimManager: PilgrimManager, handle geofenceEvents: [GeofenceEvent]) {
+    // Process the geofence events however you'd like. Here we loop through the potentially multiple geofence events and handle them individually:
+    geofenceEvents.forEach { geofenceEvent in
+      print(geofenceEvent)
+    }
+  }
 }
 

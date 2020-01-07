@@ -8,5 +8,6 @@ target 'ios_test_job' do
   # Pods for ios_test_job
 
   pod 'Pilgrim', '~> 2.2.1'
+  pod 'Alamofire', '4.9.0'
 
 end

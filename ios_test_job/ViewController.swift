@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Pilgrim
 
 class ViewController: UIViewController {
 
@@ -14,7 +15,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
+        
+        let locationManager = CLLocationManager()
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
+        
+        PilgrimManager.shared().start()
+        PilgrimManager.shared().visitTester?.fireTestVisit(confidence: .medium, type: .venue, departure: false)
+
+        PilgrimManager.shared().getCurrentLocation { (currentLocation, error) in
+            let test = currentLocation?.currentPlace.venue?.name
+            print("location",test)
+        }
     }
+    
 
 
 }

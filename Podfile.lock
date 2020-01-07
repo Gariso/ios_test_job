@@ -1,16 +1,20 @@
 PODS:
+  - Alamofire (4.9.0)
   - Pilgrim (2.2.1)
 
 DEPENDENCIES:
+  - Alamofire (= 4.9.0)
   - Pilgrim (~> 2.2.1)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Pilgrim
 
 SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   Pilgrim: 2405ca56c45cf185f45d80663aa9edeeaeaa780e
 
-PODFILE CHECKSUM: 0717173e266f6079c131973d1036053b0d515270
+PODFILE CHECKSUM: d91d539e3ee76c719f2abda3a8aea40ab8e94773
 
 COCOAPODS: 1.8.4
