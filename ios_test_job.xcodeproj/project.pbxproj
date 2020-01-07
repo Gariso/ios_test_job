@@ -16,6 +16,12 @@
 		D6B3C55A23C431E60049314E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B3C55823C431E60049314E /* LaunchScreen.storyboard */; };
 		D6B3C56523C431E70049314E /* ios_test_jobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3C56423C431E70049314E /* ios_test_jobTests.swift */; };
 		D6B3C57023C431E70049314E /* ios_test_jobUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3C56F23C431E70049314E /* ios_test_jobUITests.swift */; };
+		D6EB766E23C47F1100D986D0 /* ApiPlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EB766D23C47F1100D986D0 /* ApiPlacesManager.swift */; };
+		D6EB767023C4800100D986D0 /* PlacesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EB766F23C4800100D986D0 /* PlacesDTO.swift */; };
+		D6EB767223C4807B00D986D0 /* ErrorDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EB767123C4807B00D986D0 /* ErrorDTO.swift */; };
+		D6EB767423C491E000D986D0 /* PlacesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EB767323C491E000D986D0 /* PlacesList.swift */; };
+		D6EB767823C49FDB00D986D0 /* VenuesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EB767723C49FDB00D986D0 /* VenuesDTO.swift */; };
+		D6EB767E23C4A9B800D986D0 /* ResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EB767D23C4A9B800D986D0 /* ResponseDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		D6B3C56B23C431E70049314E /* ios_test_jobUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_test_jobUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B3C56F23C431E70049314E /* ios_test_jobUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_test_jobUITests.swift; sourceTree = "<group>"; };
 		D6B3C57123C431E70049314E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6EB766D23C47F1100D986D0 /* ApiPlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPlacesManager.swift; sourceTree = "<group>"; };
+		D6EB766F23C4800100D986D0 /* PlacesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDTO.swift; sourceTree = "<group>"; };
+		D6EB767123C4807B00D986D0 /* ErrorDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDTO.swift; sourceTree = "<group>"; };
+		D6EB767323C491E000D986D0 /* PlacesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesList.swift; sourceTree = "<group>"; };
+		D6EB767723C49FDB00D986D0 /* VenuesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesDTO.swift; sourceTree = "<group>"; };
+		D6EB767D23C4A9B800D986D0 /* ResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +142,12 @@
 				D6B3C55623C431E60049314E /* Assets.xcassets */,
 				D6B3C55823C431E60049314E /* LaunchScreen.storyboard */,
 				D6B3C55B23C431E60049314E /* Info.plist */,
+				D6EB766D23C47F1100D986D0 /* ApiPlacesManager.swift */,
+				D6EB766F23C4800100D986D0 /* PlacesDTO.swift */,
+				D6EB767123C4807B00D986D0 /* ErrorDTO.swift */,
+				D6EB767323C491E000D986D0 /* PlacesList.swift */,
+				D6EB767723C49FDB00D986D0 /* VenuesDTO.swift */,
+				D6EB767D23C4A9B800D986D0 /* ResponseDTO.swift */,
 			);
 			path = ios_test_job;
 			sourceTree = "<group>";
@@ -329,7 +347,13 @@
 			files = (
 				D6B3C55223C431E50049314E /* ViewController.swift in Sources */,
 				D6B3C54E23C431E50049314E /* AppDelegate.swift in Sources */,
+				D6EB766E23C47F1100D986D0 /* ApiPlacesManager.swift in Sources */,
 				D6B3C55023C431E50049314E /* SceneDelegate.swift in Sources */,
+				D6EB767223C4807B00D986D0 /* ErrorDTO.swift in Sources */,
+				D6EB767E23C4A9B800D986D0 /* ResponseDTO.swift in Sources */,
+				D6EB767023C4800100D986D0 /* PlacesDTO.swift in Sources */,
+				D6EB767423C491E000D986D0 /* PlacesList.swift in Sources */,
+				D6EB767823C49FDB00D986D0 /* VenuesDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

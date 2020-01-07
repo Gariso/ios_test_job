@@ -11,8 +11,11 @@ import Pilgrim
 
 class ViewController: UIViewController {
 
+    var urlData:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         
         
@@ -27,9 +30,46 @@ class ViewController: UIViewController {
             let test = currentLocation?.currentPlace.venue?.name
             print("location",test)
         }
+        
+        ApiPlacesManager.getPlaces(success: { ([PlacesDTO]) in
+            
+        }) { (ErrorDTO) in
+            
+        }
+        
+//        ApiPlacesManager.getPlaces(success: { ([PlacesDTO]) in
+//            print("PlacesDTO",PlacesDTO)
+//        }) { (ErrorDTO) in
+//
+//        }
     }
     
+    func getDataUrl(urlLoad:String) {
 
+        guard let url = URL(string: urlData!) else { return }
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+//            self.dailySales = [DailySales]()
+            guard let data = data else { return }
+            do {
+                let dailySalesData = try JSONDecoder().decode([PlacesList].self, from: data)
+                print("dailySalesData",dailySalesData)
+                //Get back to the main queue
+                DispatchQueue.main.async {
+                    print(dailySalesData)
+                }
+
+            } catch let jsonError {
+                print(jsonError)
+                let alert = UIAlertController(title: "aaa", message: "Today, no sales yet.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Continue", style: UIAlertAction.Style.default, handler: { action in
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+            }.resume()
+    }
 
 }
 

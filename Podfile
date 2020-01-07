@@ -9,5 +9,6 @@ target 'ios_test_job' do
 
   pod 'Pilgrim', '~> 2.2.1'
   pod 'Alamofire', '4.9.0'
+  pod 'AlamofireObjectMapper'
 
 end
