@@ -1,29 +1,22 @@
 PODS:
-  - Alamofire (4.9.0)
-  - AlamofireObjectMapper (5.2.1):
-    - Alamofire (~> 4.7)
-    - ObjectMapper (~> 3.4)
-  - ObjectMapper (3.5.1)
   - Pilgrim (2.2.1)
+  - SDWebImage (5.4.2):
+    - SDWebImage/Core (= 5.4.2)
+  - SDWebImage/Core (5.4.2)
 
 DEPENDENCIES:
-  - Alamofire (= 4.9.0)
-  - AlamofireObjectMapper
   - Pilgrim (~> 2.2.1)
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
-    - Alamofire
-    - AlamofireObjectMapper
-    - ObjectMapper
     - Pilgrim
+    - SDWebImage
 
 SPEC CHECKSUMS:
-  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
-  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
-  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   Pilgrim: 2405ca56c45cf185f45d80663aa9edeeaeaa780e
+  SDWebImage: 4ca2dc4eefae4224bea8f504251cda485a363745
 
-PODFILE CHECKSUM: 7e9aeb92fcbdcf977ab8c1e0c02dfe8b3164f599
+PODFILE CHECKSUM: cecbdff3ba13157341f2b4f0447e26d8e06d4016
 
 COCOAPODS: 1.8.4
