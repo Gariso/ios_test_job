@@ -1,4 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-ios_test_job/Pods-ios_test_job-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${PODS_ROOT}/Pilgrim/Pilgrim-2.2.1/Pilgrim.framework
 ${PODS_ROOT}/Pilgrim/Pilgrim-2.2.1/Pilgrim.framework.dSYM
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework

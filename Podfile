@@ -9,5 +9,7 @@ target 'ios_test_job' do
 
   pod 'Pilgrim', '~> 2.2.1'
   pod 'SDWebImage'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
 
 end

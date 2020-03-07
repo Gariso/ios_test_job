@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		CC579E0EFAB94AC2D4F19DF8 /* Pods_ios_test_job.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259F5C799EEA22BC1573C1B1 /* Pods_ios_test_job.framework */; };
+		D66FD20C23DED72B0081928C /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD20B23DED72B0081928C /* Scene.swift */; };
+		D66FD20E23DED7340081928C /* Scene+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD20D23DED7340081928C /* Scene+ViewController.swift */; };
+		D66FD21023DED7C00081928C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD20F23DED7C00081928C /* DetailViewController.swift */; };
+		D66FD21423DED9280081928C /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD21323DED9280081928C /* Interactor.swift */; };
+		D66FD21623DED9320081928C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD21523DED9320081928C /* Models.swift */; };
+		D66FD21823DED93A0081928C /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD21723DED93A0081928C /* Presenter.swift */; };
+		D66FD21A23DED94A0081928C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD21923DED94A0081928C /* Router.swift */; };
+		D66FD21C23DED9540081928C /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD21B23DED9540081928C /* Worker.swift */; };
+		D66FD21E23DED9BB0081928C /* DisplayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66FD21D23DED9BB0081928C /* DisplayCell.xib */; };
+		D66FD22123DED9DF0081928C /* DisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD22023DED9DF0081928C /* DisplayCell.swift */; };
 		D6B3C54E23C431E50049314E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3C54D23C431E50049314E /* AppDelegate.swift */; };
 		D6B3C55023C431E50049314E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3C54F23C431E50049314E /* SceneDelegate.swift */; };
 		D6B3C55223C431E50049314E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3C55123C431E50049314E /* ViewController.swift */; };
@@ -44,6 +54,16 @@
 		17EB128429220E2667A000D9 /* Pods-ios_test_job.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_test_job.debug.xcconfig"; path = "Target Support Files/Pods-ios_test_job/Pods-ios_test_job.debug.xcconfig"; sourceTree = "<group>"; };
 		259F5C799EEA22BC1573C1B1 /* Pods_ios_test_job.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_test_job.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		939E004DE3844812C9BE1D2F /* Pods-ios_test_job.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_test_job.release.xcconfig"; path = "Target Support Files/Pods-ios_test_job/Pods-ios_test_job.release.xcconfig"; sourceTree = "<group>"; };
+		D66FD20B23DED72B0081928C /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		D66FD20D23DED7340081928C /* Scene+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene+ViewController.swift"; sourceTree = "<group>"; };
+		D66FD20F23DED7C00081928C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D66FD21323DED9280081928C /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		D66FD21523DED9320081928C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		D66FD21723DED93A0081928C /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		D66FD21923DED94A0081928C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D66FD21B23DED9540081928C /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		D66FD21D23DED9BB0081928C /* DisplayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayCell.xib; sourceTree = "<group>"; };
+		D66FD22023DED9DF0081928C /* DisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCell.swift; sourceTree = "<group>"; };
 		D6B3C54A23C431E50049314E /* ios_test_job.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_test_job.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B3C54D23C431E50049314E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6B3C54F23C431E50049314E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +128,55 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D66FD20923DED3ED0081928C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6B3C54F23C431E50049314E /* SceneDelegate.swift */,
+				D6B3C54D23C431E50049314E /* AppDelegate.swift */,
+				D6B3C55B23C431E60049314E /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D66FD20A23DED7200081928C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D66FD20B23DED72B0081928C /* Scene.swift */,
+				D66FD20D23DED7340081928C /* Scene+ViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D66FD21123DED9060081928C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D66FD21223DED9140081928C /* Main */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D66FD21223DED9140081928C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D66FD21F23DED9C00081928C /* UI */,
+				D66FD21323DED9280081928C /* Interactor.swift */,
+				D66FD21523DED9320081928C /* Models.swift */,
+				D66FD21723DED93A0081928C /* Presenter.swift */,
+				D66FD21923DED94A0081928C /* Router.swift */,
+				D66FD21B23DED9540081928C /* Worker.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D66FD21F23DED9C00081928C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D66FD22023DED9DF0081928C /* DisplayCell.swift */,
+				D66FD21D23DED9BB0081928C /* DisplayCell.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		D6B3C54123C431E50049314E = {
 			isa = PBXGroup;
 			children = (
@@ -133,15 +202,15 @@
 		D6B3C54C23C431E50049314E /* ios_test_job */ = {
 			isa = PBXGroup;
 			children = (
-				D6B3C54D23C431E50049314E /* AppDelegate.swift */,
-				D6B3C54F23C431E50049314E /* SceneDelegate.swift */,
-				D6EB768D23C6021E00D986D0 /* Manager */,
+				D66FD20A23DED7200081928C /* Scenes */,
+				D66FD21123DED9060081928C /* Features */,
+				D6EB768D23C6021E00D986D0 /* Services */,
 				D6EB768C23C601FF00D986D0 /* Model */,
 				D6EB768B23C601D900D986D0 /* Controllers */,
 				D6B3C55323C431E50049314E /* Main.storyboard */,
 				D6B3C55623C431E60049314E /* Assets.xcassets */,
 				D6B3C55823C431E60049314E /* LaunchScreen.storyboard */,
-				D6B3C55B23C431E60049314E /* Info.plist */,
+				D66FD20923DED3ED0081928C /* Supporting Files */,
 			);
 			path = ios_test_job;
 			sourceTree = "<group>";
@@ -168,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				D6B3C55123C431E50049314E /* ViewController.swift */,
+				D66FD20F23DED7C00081928C /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -183,12 +253,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D6EB768D23C6021E00D986D0 /* Manager */ = {
+		D6EB768D23C6021E00D986D0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				D6EB766D23C47F1100D986D0 /* ApiPlacesManager.swift */,
 			);
-			path = Manager;
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +369,7 @@
 			files = (
 				D6B3C55A23C431E60049314E /* LaunchScreen.storyboard in Resources */,
 				D6B3C55723C431E60049314E /* Assets.xcassets in Resources */,
+				D66FD21E23DED9BB0081928C /* DisplayCell.xib in Resources */,
 				D6B3C55523C431E50049314E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,14 +437,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D66FD21023DED7C00081928C /* DetailViewController.swift in Sources */,
+				D66FD21C23DED9540081928C /* Worker.swift in Sources */,
+				D66FD21623DED9320081928C /* Models.swift in Sources */,
 				D6B3C55223C431E50049314E /* ViewController.swift in Sources */,
 				D6B3C54E23C431E50049314E /* AppDelegate.swift in Sources */,
 				D6EB768823C5F8AB00D986D0 /* VenueCategoryIcon.swift in Sources */,
 				D6EB766E23C47F1100D986D0 /* ApiPlacesManager.swift in Sources */,
 				D6B3C55023C431E50049314E /* SceneDelegate.swift in Sources */,
+				D66FD22123DED9DF0081928C /* DisplayCell.swift in Sources */,
+				D66FD21A23DED94A0081928C /* Router.swift in Sources */,
+				D66FD21423DED9280081928C /* Interactor.swift in Sources */,
+				D66FD21823DED93A0081928C /* Presenter.swift in Sources */,
 				D6EB768A23C5FAB400D986D0 /* Location.swift in Sources */,
 				D6EB767823C49FDB00D986D0 /* VenuesDTO.swift in Sources */,
+				D66FD20E23DED7340081928C /* Scene+ViewController.swift in Sources */,
 				D6EB768423C5F87300D986D0 /* VenueCategory.swift in Sources */,
+				D66FD20C23DED72B0081928C /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,7 +629,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6KSPNFD33R;
-				INFOPLIST_FILE = ios_test_job/Info.plist;
+				INFOPLIST_FILE = "ios_test_job/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -568,7 +648,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6KSPNFD33R;
-				INFOPLIST_FILE = ios_test_job/Info.plist;
+				INFOPLIST_FILE = "ios_test_job/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

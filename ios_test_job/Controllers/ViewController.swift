@@ -9,24 +9,41 @@
 import UIKit
 import Pilgrim
 import SDWebImage
+import Alamofire
+import SwiftyJSON
 
-struct Response <Response: Codable> : Codable {
-    let response: Response
+protocol DisplayLogic : class {
+    func displayGetVenuesSuccess(viewModel: VC.GetVenues.ViewModel)
+    func displayGetVenuesFail()
 }
 
-struct SearchResponse : Codable {
-    let venues: [VenuesDTO]
-}
-
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, DisplayLogic {
     
-    
+    //Mark: - IBOutlet
     @IBOutlet weak var placesListTableView: UITableView!
     
+    
+    //Mark: -Variable
+    let displayCell = "displayCell"
+    var interactor: BusinessLogic?
+    var router: Router?
+    var displayVenues: [VC.GetVenues.ViewModel.DisplayVenue] = []
     var urlData:String?
     var accessToken = "QWINIP4JISRF10LIAPUIVJKDUWGZVSPZYHOYVGK1KTFUMOMP"
-    var venues: [VenuesDTO] = []
+    var venues: [VenueDTO] = []
+    
+    
+    //Mark: - Life Cycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        configurator()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        configurator()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,62 +51,34 @@ class ViewController: UIViewController {
         self.placesListTableView.delegate = self
         self.placesListTableView.dataSource = self
         
-        
-        let locationManager = CLLocationManager()
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.requestAlwaysAuthorization()
-        
-        PilgrimManager.shared().start()
-        PilgrimManager.shared().visitTester?.fireTestVisit(confidence: .medium, type: .venue, departure: false)
-
-        PilgrimManager.shared().getCurrentLocation { (currentLocation, error) in
-            let test = currentLocation?.currentPlace.venue?.name
-            print("location",test)
-        }
-        
-//        ApiPlacesManager.getPlaces(success: { ([PlacesDTO]) in
-//
-//        }) { (ErrorDTO) in
-//
-//        }
+        self.placesListTableView.register(UINib(nibName: "DisplayCell", bundle: nil), forCellReuseIdentifier: displayCell)
         
         
-//        getData()
-//        testApi()
-        searchVenuesWithCoordinate { (error) in
-            
-        }
-
+        interactor?.getVenues()
     }
     
+    // MARK: - Function
     
-    func searchVenuesWithCoordinate(completion: ((Error?) -> ())?) {
-
+    func displayGetVenuesSuccess(viewModel: VC.GetVenues.ViewModel) {
+        displayVenues = viewModel.displayVenues
+        self.placesListTableView.reloadData()
+    }
+    
+    func displayGetVenuesFail() {
+        print("Fail")
+    }
+    
+    func configurator() {
+        let interactor = Interactor()
+        let presenter = Presenter()
+        let router = Router()
         
-        let client = ApiPlacesManager(accessToken: accessToken)
-        
-        let parameter: [String: String] = [
-            "ll": "40.7099,-73.9622",
-        ];
-
-        client.request(path: "venues/search", parameter: parameter) {
-            [weak self] result in
-            switch result {
-            case let .success(data):
-                let decoder: JSONDecoder = JSONDecoder()
-                do {
-                    let response = try decoder.decode(Response<SearchResponse>.self, from: data)
-                    self?.venues = response.response.venues
-                    print("self?.venues",self?.venues)
-                    self?.placesListTableView.reloadData()
-                    completion?(nil)
-                } catch {
-                    completion?(error)
-                }
-            case let .failure(error):
-                completion?(error)
-            }
-        }
+        self.interactor = interactor
+        self.router = router
+        interactor.presenter = presenter
+        presenter.viewController = self
+        router.viewControler = self
+        router.dataStore = interactor
     }
 
 }
@@ -97,24 +86,15 @@ class ViewController: UIViewController {
 extension ViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(venues.count)
-        return self.venues.count
+        return displayVenues.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "placesCell", for: indexPath) as UITableViewCell
-        
-        cell.textLabel?.text = venues[indexPath.row].name
-        cell.detailTextLabel?.text = venues[indexPath.row].location.address
-        cell.imageView?.sd_cancelCurrentImageLoad()
-
-        var categoryIconURL: URL? = nil
-        if let categories = venues[indexPath.row].categories {
-            if !categories.isEmpty {
-                categoryIconURL = URL(string: categories[0].icon.categoryIconUrl)
-            }
-        }
-        cell.imageView?.sd_setImage(with: categoryIconURL, placeholderImage: UIImage(named: "none"))
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: displayCell, for: indexPath) as! DisplayCell
+    
+        let data = displayVenues[indexPath.row]
+        cell.configureCell(icon: data.icon, name: data.name, address: data.address)
+    
         return cell
     }
     
